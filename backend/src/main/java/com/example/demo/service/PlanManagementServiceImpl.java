@@ -10,7 +10,7 @@ import com.example.demo.entity.NutritionPlan;
 import com.example.demo.repository.NutritionPlanRepository;
 
 @Service
-public class NutritionPlanServiceImpl implements NutritionPlanService {
+public class PlanManagementServiceImpl implements PlanManagementService {
 
     @Autowired
     private NutritionPlanRepository nutritionPlanRepository;
