@@ -3,21 +3,22 @@ package com.example.demo.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dto.ClientProfileDTO;
+import com.example.demo.dto.ProfileDto;
 import com.example.demo.entity.ClientProfile;
 import com.example.demo.repository.ClientProfileRepository;
 
 @Service
-public class ClientProfileServiceImpl implements ClientProfileService {
+public class ProfileManagementServiceImpl implements ProfileManagementService {
 
     @Autowired
     private ClientProfileRepository clientProfileRepository;
 
     @Override
-    public ClientProfile getMyProfile(String email) {
-        // TODO: Will be implemented after Auth module
+    public ClientProfile getMyProfile(Authentication auth) {
+        // Will be implemented after Auth module
         return null;
     }
 
@@ -27,8 +28,8 @@ public class ClientProfileServiceImpl implements ClientProfileService {
     }
 
     @Override
-    public ClientProfile updateProfile(String email, ClientProfileDTO dto) {
-        // TODO: Will be implemented after Auth module
+    public ClientProfile updateProfile(String email, ProfileDto dto) {
+        // Will be implemented after Auth module
         return null;
     }
 }
