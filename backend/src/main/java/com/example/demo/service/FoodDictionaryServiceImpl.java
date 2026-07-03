@@ -17,14 +17,15 @@ public class FoodDictionaryServiceImpl implements FoodDictionaryService {
 
     @Override
     public FoodDictionary createFood(FoodDictionaryDTO foodDTO) {
+
         FoodDictionary food = new FoodDictionary();
 
-        food.setFoodName(foodDTO.getFoodName());
-        food.setCalories(foodDTO.getCalories());
-        food.setProtein(foodDTO.getProtein());
-        food.setCarbs(foodDTO.getCarbs());
-        food.setFat(foodDTO.getFat());
-        food.setServingSize(foodDTO.getServingSize());
+        food.setItemName(foodDTO.getItemName());
+        food.setBaseServingG(foodDTO.getBaseServingG());
+        food.setCaloriesPerServing(foodDTO.getCaloriesPerServing());
+        food.setProteinPerServing(foodDTO.getProteinPerServing());
+        food.setCarbsPerServing(foodDTO.getCarbsPerServing());
+        food.setFatPerServing(foodDTO.getFatPerServing());
 
         return foodDictionaryRepository.save(food);
     }
@@ -41,15 +42,17 @@ public class FoodDictionaryServiceImpl implements FoodDictionaryService {
 
     @Override
     public FoodDictionary updateFood(Long id, FoodDictionaryDTO foodDTO) {
+
         FoodDictionary food = foodDictionaryRepository.findById(id).orElse(null);
 
         if (food != null) {
-            food.setFoodName(foodDTO.getFoodName());
-            food.setCalories(foodDTO.getCalories());
-            food.setProtein(foodDTO.getProtein());
-            food.setCarbs(foodDTO.getCarbs());
-            food.setFat(foodDTO.getFat());
-            food.setServingSize(foodDTO.getServingSize());
+
+            food.setItemName(foodDTO.getItemName());
+            food.setBaseServingG(foodDTO.getBaseServingG());
+            food.setCaloriesPerServing(foodDTO.getCaloriesPerServing());
+            food.setProteinPerServing(foodDTO.getProteinPerServing());
+            food.setCarbsPerServing(foodDTO.getCarbsPerServing());
+            food.setFatPerServing(foodDTO.getFatPerServing());
 
             return foodDictionaryRepository.save(food);
         }
@@ -64,6 +67,6 @@ public class FoodDictionaryServiceImpl implements FoodDictionaryService {
 
     @Override
     public List<FoodDictionary> searchFoodByName(String foodName) {
-        return foodDictionaryRepository.findByFoodNameContainingIgnoreCase(foodName);
+        return foodDictionaryRepository.findByItemNameContainingIgnoreCase(foodName);
     }
 }
