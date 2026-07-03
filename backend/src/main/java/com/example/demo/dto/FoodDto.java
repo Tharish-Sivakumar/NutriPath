@@ -1,6 +1,6 @@
 package com.example.demo.dto;
 
-public class FoodDictionaryDTO {
+public class FoodDto {
 
     private Long id;
     private String itemName;
@@ -10,10 +10,10 @@ public class FoodDictionaryDTO {
     private Double carbsPerServing;
     private Double fatPerServing;
 
-    public FoodDictionaryDTO() {
+    public FoodDto() {
     }
 
-    public FoodDictionaryDTO(Long id, String itemName, Double baseServingG,
+    public FoodDto(Long id, String itemName, Double baseServingG,
                              Double caloriesPerServing,
                              Double proteinPerServing,
                              Double carbsPerServing,

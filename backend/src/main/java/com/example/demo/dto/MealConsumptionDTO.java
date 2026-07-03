@@ -2,7 +2,7 @@ package com.example.demo.dto;
 
 import java.time.LocalDateTime;
 
-public class MealConsumptionDTO {
+public class MealConsumptionDto {
 
     private Long id;
     private Long trackerId;
@@ -11,7 +11,7 @@ public class MealConsumptionDTO {
     private String mealType;
     private LocalDateTime loggedAt;
 
-    public MealConsumptionDTO() {
+    public MealConsumptionDto() {
     }
 
     public Long getId() {

@@ -1,6 +1,6 @@
 package com.example.demo.dto;
 
-public class NutritionPlanDTO {
+public class PlanDto {
 
     private Long id;
     private Long clientId;
@@ -10,10 +10,10 @@ public class NutritionPlanDTO {
     private Double targetFat;
     private String planStatus;
 
-    public NutritionPlanDTO() {
+    public PlanDto() {
     }
 
-    public NutritionPlanDTO(Long id, Long clientId, Double targetCalories,
+    public PlanDto(Long id, Long clientId, Double targetCalories,
                             Double targetProtein, Double targetCarbs,
                             Double targetFat, String planStatus) {
         this.id = id;

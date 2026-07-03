@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dto.MealConsumptionDTO;
+import com.example.demo.dto.MealConsumptionDto;
 import com.example.demo.entity.DailyTracker;
 import com.example.demo.repository.DailyTrackerRepository;
 
@@ -24,7 +24,7 @@ public class DailyTrackerServiceImpl implements DailyTrackerService {
     }
 
     @Override
-    public DailyTracker logMealConsumption(String email, MealConsumptionDTO dto) {
+    public DailyTracker logMealConsumption(String email, MealConsumptionDto dto) {
         return getOrCreateCurrentTracker(email);
     }
 
