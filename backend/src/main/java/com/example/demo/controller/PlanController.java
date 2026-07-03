@@ -11,7 +11,7 @@ import com.example.demo.service.NutritionPlanService;
 
 @RestController
 @RequestMapping("/api/plans")
-public class NutritionPlanController {
+public class PlanController {
 
     @Autowired
     private NutritionPlanService nutritionPlanService;
