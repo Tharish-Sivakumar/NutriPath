@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.dto.FoodDictionaryDTO;
+import com.example.demo.dto.FoodDto;
 import com.example.demo.entity.FoodDictionary;
 import com.example.demo.service.FoodDictionaryService;
 
@@ -17,7 +17,7 @@ public class FoodDictionaryController {
     private FoodDictionaryService foodDictionaryService;
 
     @PostMapping
-    public FoodDictionary createFood(@RequestBody FoodDictionaryDTO foodDTO) {
+    public FoodDictionary createFood(@RequestBody FoodDto foodDTO) {
         return foodDictionaryService.createFood(foodDTO);
     }
 
@@ -33,7 +33,7 @@ public class FoodDictionaryController {
 
     @PutMapping("/{id}")
     public FoodDictionary updateFood(@PathVariable Long id,
-                                     @RequestBody FoodDictionaryDTO foodDTO) {
+                                     @RequestBody FoodDto foodDTO) {
         return foodDictionaryService.updateFood(id, foodDTO);
     }
 

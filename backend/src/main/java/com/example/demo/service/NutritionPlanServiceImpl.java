@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dto.NutritionPlanDTO;
+import com.example.demo.dto.PlanDto;
 import com.example.demo.entity.NutritionPlan;
 import com.example.demo.repository.NutritionPlanRepository;
 
@@ -16,7 +16,7 @@ public class NutritionPlanServiceImpl implements NutritionPlanService {
     private NutritionPlanRepository nutritionPlanRepository;
 
     @Override
-    public NutritionPlan createPlan(NutritionPlanDTO planDTO) {
+    public NutritionPlan createPlan(PlanDto planDTO) {
         NutritionPlan plan = new NutritionPlan();
 
         plan.setClientId(planDTO.getClientId());
@@ -40,7 +40,7 @@ public class NutritionPlanServiceImpl implements NutritionPlanService {
     }
 
     @Override
-    public NutritionPlan updatePlan(Long id, NutritionPlanDTO planDTO) {
+    public NutritionPlan updatePlan(Long id, PlanDto planDTO) {
         NutritionPlan plan = nutritionPlanRepository.findById(id).orElse(null);
 
         if (plan != null) {

@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dto.FoodDictionaryDTO;
+import com.example.demo.dto.FoodDto;
 import com.example.demo.entity.FoodDictionary;
 import com.example.demo.repository.FoodDictionaryRepository;
 
@@ -16,7 +16,7 @@ public class FoodDictionaryServiceImpl implements FoodDictionaryService {
     private FoodDictionaryRepository foodDictionaryRepository;
 
     @Override
-    public FoodDictionary createFood(FoodDictionaryDTO foodDTO) {
+    public FoodDictionary createFood(FoodDto foodDTO) {
 
         FoodDictionary food = new FoodDictionary();
 
@@ -41,7 +41,7 @@ public class FoodDictionaryServiceImpl implements FoodDictionaryService {
     }
 
     @Override
-    public FoodDictionary updateFood(Long id, FoodDictionaryDTO foodDTO) {
+    public FoodDictionary updateFood(Long id, FoodDto foodDTO) {
 
         FoodDictionary food = foodDictionaryRepository.findById(id).orElse(null);
 

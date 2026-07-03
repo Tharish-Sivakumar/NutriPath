@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.dto.NutritionPlanDTO;
+import com.example.demo.dto.PlanDto;
 import com.example.demo.entity.NutritionPlan;
 import com.example.demo.service.NutritionPlanService;
 
@@ -17,7 +17,7 @@ public class NutritionPlanController {
     private NutritionPlanService nutritionPlanService;
 
     @PostMapping
-    public NutritionPlan createPlan(@RequestBody NutritionPlanDTO planDTO) {
+    public NutritionPlan createPlan(@RequestBody PlanDto planDTO) {
         return nutritionPlanService.createPlan(planDTO);
     }
 
@@ -33,7 +33,7 @@ public class NutritionPlanController {
 
     @PutMapping("/{id}")
     public NutritionPlan updatePlan(@PathVariable Long id,
-                                    @RequestBody NutritionPlanDTO planDTO) {
+                                    @RequestBody PlanDto planDTO) {
         return nutritionPlanService.updatePlan(id, planDTO);
     }
 
