@@ -2,7 +2,12 @@ package com.example.demo.entity;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "daily_tracker")
@@ -12,19 +17,37 @@ public class DailyTracker {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "client_id", nullable = false)
     private Long clientId;
 
+    @Column(name = "date")
     private LocalDate date;
 
+    @Column(name = "total_calories")
     private Double totalCalories;
 
+    @Column(name = "total_protein")
     private Double totalProtein;
 
+    @Column(name = "total_carbs")
     private Double totalCarbs;
 
+    @Column(name = "total_fat")
     private Double totalFat;
 
     public DailyTracker() {
+    }
+
+    public DailyTracker(Long id, Long clientId, LocalDate date,
+                        Double totalCalories, Double totalProtein,
+                        Double totalCarbs, Double totalFat) {
+        this.id = id;
+        this.clientId = clientId;
+        this.date = date;
+        this.totalCalories = totalCalories;
+        this.totalProtein = totalProtein;
+        this.totalCarbs = totalCarbs;
+        this.totalFat = totalFat;
     }
 
     public Long getId() {
