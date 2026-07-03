@@ -11,7 +11,7 @@ import com.example.demo.service.FoodDictionaryService;
 
 @RestController
 @RequestMapping("/api/foods")
-public class FoodDictionaryController {
+public class FoodController {
 
     @Autowired
     private FoodDictionaryService foodDictionaryService;
