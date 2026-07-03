@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.dto.PlanDto;
 import com.example.demo.entity.NutritionPlan;
-import com.example.demo.service.NutritionPlanService;
+import com.example.demo.service.PlanManagementService;
 
 @RestController
 @RequestMapping("/api/plans")
 public class PlanController {
 
     @Autowired
-    private NutritionPlanService nutritionPlanService;
+    private PlanManagementService nutritionPlanService;
 
     @PostMapping
     public NutritionPlan createPlan(@RequestBody PlanDto planDTO) {

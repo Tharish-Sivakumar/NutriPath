@@ -5,7 +5,7 @@ import java.util.List;
 import com.example.demo.dto.PlanDto;
 import com.example.demo.entity.NutritionPlan;
 
-public interface NutritionPlanService {
+public interface PlanManagementService {
 
     NutritionPlan createPlan(PlanDto planDTO);
 
