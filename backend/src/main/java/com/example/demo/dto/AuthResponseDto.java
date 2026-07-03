@@ -38,34 +38,4 @@ public class AuthResponseDto {
     public void setRole(String role) {
         this.role = role;
     }
-
-    // Builder Pattern
-    public static Builder builder() {
-        return new Builder();
-    }
-
-    public static class Builder {
-        private String token;
-        private String email;
-        private String role;
-
-        public Builder token(String token) {
-            this.token = token;
-            return this;
-        }
-
-        public Builder email(String email) {
-            this.email = email;
-            return this;
-        }
-
-        public Builder role(String role) {
-            this.role = role;
-            return this;
-        }
-
-        public AuthResponseDto build() {
-            return new AuthResponseDto(token, email, role);
-        }
-    }
 }
