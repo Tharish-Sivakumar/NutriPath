@@ -14,36 +14,36 @@ import com.example.demo.service.FoodCatalogService;
 public class FoodController {
 
     @Autowired
-    private FoodCatalogService foodDictionaryService;
+    private FoodCatalogService foodCatalogService;
 
     @PostMapping
     public FoodDictionary createFood(@RequestBody FoodDto foodDTO) {
-        return foodDictionaryService.createFood(foodDTO);
+        return foodCatalogService.createFood(foodDTO);
     }
 
     @GetMapping("/{id}")
     public FoodDictionary getFoodById(@PathVariable Long id) {
-        return foodDictionaryService.getFoodById(id);
+        return foodCatalogService.getFoodById(id);
     }
 
     @GetMapping
     public List<FoodDictionary> getAllFoods() {
-        return foodDictionaryService.getAllFoods();
+        return foodCatalogService.getAllFoods();
     }
 
     @PutMapping("/{id}")
     public FoodDictionary updateFood(@PathVariable Long id,
                                      @RequestBody FoodDto foodDTO) {
-        return foodDictionaryService.updateFood(id, foodDTO);
+        return foodCatalogService.updateFood(id, foodDTO);
     }
 
     @DeleteMapping("/{id}")
     public void deleteFood(@PathVariable Long id) {
-        foodDictionaryService.deleteFood(id);
+        foodCatalogService.deleteFood(id);
     }
 
     @GetMapping("/search")
     public List<FoodDictionary> searchFoodByName(@RequestParam String itemName) {
-        return foodDictionaryService.searchFoodByName(itemName);
+        return foodCatalogService.searchFoodByName(itemName);
     }
 }
