@@ -7,15 +7,10 @@ import com.example.demo.entity.FoodDictionary;
 
 public interface FoodDictionaryService {
 
-    FoodDictionary createFood(FoodDictionaryDTO foodDTO);
+    List<FoodDictionary> searchFoods(String query);
 
-    FoodDictionary getFoodById(Long id);
-
-    List<FoodDictionary> getAllFoods();
-
-    FoodDictionary updateFood(Long id, FoodDictionaryDTO foodDTO);
+    FoodDictionary addCustomFoodItem(FoodDictionaryDTO dto);
 
     void deleteFood(Long id);
 
-    List<FoodDictionary> searchFoodByName(String foodName);
 }
