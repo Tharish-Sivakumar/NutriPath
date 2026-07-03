@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.dto.FoodDto;
 import com.example.demo.entity.FoodDictionary;
-import com.example.demo.service.FoodDictionaryService;
+import com.example.demo.service.FoodCatalogService;
 
 @RestController
 @RequestMapping("/api/foods")
 public class FoodController {
 
     @Autowired
-    private FoodDictionaryService foodDictionaryService;
+    private FoodCatalogService foodDictionaryService;
 
     @PostMapping
     public FoodDictionary createFood(@RequestBody FoodDto foodDTO) {
