@@ -5,7 +5,7 @@ import java.util.List;
 import com.example.demo.dto.FoodDto;
 import com.example.demo.entity.FoodDictionary;
 
-public interface FoodDictionaryService {
+public interface FoodCatalogService {
 
     FoodDictionary createFood(FoodDto foodDTO);
 

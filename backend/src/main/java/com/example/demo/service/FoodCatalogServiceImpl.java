@@ -10,7 +10,7 @@ import com.example.demo.entity.FoodDictionary;
 import com.example.demo.repository.FoodDictionaryRepository;
 
 @Service
-public class FoodDictionaryServiceImpl implements FoodDictionaryService {
+public class FoodCatalogServiceImpl implements FoodCatalogService {
 
     @Autowired
     private FoodDictionaryRepository foodDictionaryRepository;
