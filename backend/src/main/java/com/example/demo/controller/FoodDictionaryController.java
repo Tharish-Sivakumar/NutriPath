@@ -43,7 +43,7 @@ public class FoodDictionaryController {
     }
 
     @GetMapping("/search")
-    public List<FoodDictionary> searchFoodByName(@RequestParam String foodName) {
-        return foodDictionaryService.searchFoodByName(foodName);
+    public List<FoodDictionary> searchFoodByName(@RequestParam String itemName) {
+        return foodDictionaryService.searchFoodByName(itemName);
     }
 }
