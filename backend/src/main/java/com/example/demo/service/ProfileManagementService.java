@@ -2,15 +2,17 @@ package com.example.demo.service;
 
 import java.util.List;
 
-import com.example.demo.dto.ClientProfileDTO;
+import org.springframework.security.core.Authentication;
+
+import com.example.demo.dto.ProfileDto;
 import com.example.demo.entity.ClientProfile;
 
-public interface ClientProfileService {
+public interface ProfileManagementService {
 
-    ClientProfile getMyProfile(String email);
+    ClientProfile getMyProfile(Authentication auth);
 
     List<ClientProfile> getAllProfiles();
 
-    ClientProfile updateProfile(String email, ClientProfileDTO dto);
+    ClientProfile updateProfile(String email, ProfileDto dto);
 
 }

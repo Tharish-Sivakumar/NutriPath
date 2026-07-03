@@ -1,6 +1,6 @@
 package com.example.demo.dto;
 
-public class ClientProfileDTO {
+public class ProfileDto {
 
     private Long id;
     private Long accountId;
@@ -10,10 +10,10 @@ public class ClientProfileDTO {
     private String activityLevel;
     private Double calculatedBmr;
 
-    public ClientProfileDTO() {
+    public ProfileDto() {
     }
 
-    public ClientProfileDTO(Long id, Long accountId, Integer age,
+    public ProfileDto(Long id, Long accountId, Integer age,
                             Double weightKg, Double heightCm,
                             String activityLevel, Double calculatedBmr) {
         this.id = id;
