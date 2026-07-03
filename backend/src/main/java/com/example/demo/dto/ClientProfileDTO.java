@@ -4,24 +4,25 @@ public class ClientProfileDTO {
 
     private Long id;
     private Long accountId;
-    private String name;
     private Integer age;
-    private Double weight;
-    private Double height;
-    private String goal;
+    private Double weightKg;
+    private Double heightCm;
+    private String activityLevel;
+    private Double calculatedBmr;
 
     public ClientProfileDTO() {
     }
 
-    public ClientProfileDTO(Long id, Long accountId, String name, Integer age,
-                            Double weight, Double height, String goal) {
+    public ClientProfileDTO(Long id, Long accountId, Integer age,
+                            Double weightKg, Double heightCm,
+                            String activityLevel, Double calculatedBmr) {
         this.id = id;
         this.accountId = accountId;
-        this.name = name;
         this.age = age;
-        this.weight = weight;
-        this.height = height;
-        this.goal = goal;
+        this.weightKg = weightKg;
+        this.heightCm = heightCm;
+        this.activityLevel = activityLevel;
+        this.calculatedBmr = calculatedBmr;
     }
 
     public Long getId() {
@@ -40,14 +41,6 @@ public class ClientProfileDTO {
         this.accountId = accountId;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Integer getAge() {
         return age;
     }
@@ -56,27 +49,35 @@ public class ClientProfileDTO {
         this.age = age;
     }
 
-    public Double getWeight() {
-        return weight;
+    public Double getWeightKg() {
+        return weightKg;
     }
 
-    public void setWeight(Double weight) {
-        this.weight = weight;
+    public void setWeightKg(Double weightKg) {
+        this.weightKg = weightKg;
     }
 
-    public Double getHeight() {
-        return height;
+    public Double getHeightCm() {
+        return heightCm;
     }
 
-    public void setHeight(Double height) {
-        this.height = height;
+    public void setHeightCm(Double heightCm) {
+        this.heightCm = heightCm;
     }
 
-    public String getGoal() {
-        return goal;
+    public String getActivityLevel() {
+        return activityLevel;
     }
 
-    public void setGoal(String goal) {
-        this.goal = goal;
+    public void setActivityLevel(String activityLevel) {
+        this.activityLevel = activityLevel;
+    }
+
+    public Double getCalculatedBmr() {
+        return calculatedBmr;
+    }
+
+    public void setCalculatedBmr(Double calculatedBmr) {
+        this.calculatedBmr = calculatedBmr;
     }
 }
