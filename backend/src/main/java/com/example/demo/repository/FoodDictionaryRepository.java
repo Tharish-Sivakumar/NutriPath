@@ -8,6 +8,6 @@ import com.example.demo.entity.FoodDictionary;
 
 public interface FoodDictionaryRepository extends JpaRepository<FoodDictionary, Long> {
 
-    List<FoodDictionary> findByFoodNameContainingIgnoreCase(String foodName);
+    List<FoodDictionary> findByItemNameContainingIgnoreCase(String itemName);
 
 }

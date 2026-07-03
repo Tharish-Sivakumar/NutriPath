@@ -17,5 +17,5 @@ public interface FoodDictionaryService {
 
     void deleteFood(Long id);
 
-    List<FoodDictionary> searchFoodByName(String foodName);
+    List<FoodDictionary> searchFoodByName(String itemName);
 }
