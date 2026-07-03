@@ -13,33 +13,34 @@ public class ClientProfile {
     @Column(name = "account_id", nullable = false)
     private Long accountId;
 
-    @Column(nullable = false)
-    private String name;
-
     @Column
     private Integer age;
 
-    @Column
-    private Double weight;
+    @Column(name = "weight_kg")
+    private Double weightKg;
 
-    @Column
-    private Double height;
+    @Column(name = "height_cm")
+    private Double heightCm;
 
-    @Column
-    private String goal;
+    @Column(name = "activity_level")
+    private String activityLevel;
+
+    @Column(name = "calculated_bmr")
+    private Double calculatedBmr;
 
     public ClientProfile() {
     }
 
-    public ClientProfile(Long id, Long accountId, String name, Integer age,
-                         Double weight, Double height, String goal) {
+    public ClientProfile(Long id, Long accountId, Integer age,
+                         Double weightKg, Double heightCm,
+                         String activityLevel, Double calculatedBmr) {
         this.id = id;
         this.accountId = accountId;
-        this.name = name;
         this.age = age;
-        this.weight = weight;
-        this.height = height;
-        this.goal = goal;
+        this.weightKg = weightKg;
+        this.heightCm = heightCm;
+        this.activityLevel = activityLevel;
+        this.calculatedBmr = calculatedBmr;
     }
 
     public Long getId() {
@@ -58,14 +59,6 @@ public class ClientProfile {
         this.accountId = accountId;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Integer getAge() {
         return age;
     }
@@ -74,27 +67,35 @@ public class ClientProfile {
         this.age = age;
     }
 
-    public Double getWeight() {
-        return weight;
+    public Double getWeightKg() {
+        return weightKg;
     }
 
-    public void setWeight(Double weight) {
-        this.weight = weight;
+    public void setWeightKg(Double weightKg) {
+        this.weightKg = weightKg;
     }
 
-    public Double getHeight() {
-        return height;
+    public Double getHeightCm() {
+        return heightCm;
     }
 
-    public void setHeight(Double height) {
-        this.height = height;
+    public void setHeightCm(Double heightCm) {
+        this.heightCm = heightCm;
     }
 
-    public String getGoal() {
-        return goal;
+    public String getActivityLevel() {
+        return activityLevel;
     }
 
-    public void setGoal(String goal) {
-        this.goal = goal;
+    public void setActivityLevel(String activityLevel) {
+        this.activityLevel = activityLevel;
+    }
+
+    public Double getCalculatedBmr() {
+        return calculatedBmr;
+    }
+
+    public void setCalculatedBmr(Double calculatedBmr) {
+        this.calculatedBmr = calculatedBmr;
     }
 }
