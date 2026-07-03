@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.dto.MealConsumptionDTO;
+import com.example.demo.dto.MealConsumptionDto;
 import com.example.demo.entity.DailyTracker;
 import com.example.demo.service.DailyTrackerService;
 
@@ -23,7 +23,7 @@ public class DailyTrackerController {
 
     @PostMapping("/meal")
     public DailyTracker logMeal(@RequestParam String email,
-                                @RequestBody MealConsumptionDTO dto) {
+                                @RequestBody MealConsumptionDto dto) {
         return dailyTrackerService.logMealConsumption(email, dto);
     }
 
