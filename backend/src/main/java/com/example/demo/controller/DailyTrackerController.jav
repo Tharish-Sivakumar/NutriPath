@@ -22,8 +22,7 @@ public class DailyTrackerController {
     }
 
     @PostMapping("/meal")
-    public DailyTracker logMeal(@RequestParam String email,
-                                @RequestBody MealConsumptionDto dto) {
+    public DailyTracker logMeal(@RequestParam String email, @RequestBody MealConsumptionDto dto) {
         return dailyTrackerService.logMealConsumption(email, dto);
     }
 
