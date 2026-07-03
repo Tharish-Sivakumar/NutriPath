@@ -10,37 +10,37 @@ public class FoodDictionary {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String foodName;
+    @Column(name = "item_name", nullable = false)
+    private String itemName;
 
-    @Column
-    private Double calories;
+    @Column(name = "base_serving_g")
+    private Double baseServingG;
 
-    @Column
-    private Double protein;
+    @Column(name = "calories_per_serving")
+    private Double caloriesPerServing;
 
-    @Column
-    private Double carbs;
+    @Column(name = "protein_per_serving")
+    private Double proteinPerServing;
 
-    @Column
-    private Double fat;
+    @Column(name = "carbs_per_serving")
+    private Double carbsPerServing;
 
-    @Column
-    private String servingSize;
+    @Column(name = "fat_per_serving")
+    private Double fatPerServing;
 
     public FoodDictionary() {
     }
 
-    public FoodDictionary(Long id, String foodName, Double calories,
-                          Double protein, Double carbs, Double fat,
-                          String servingSize) {
+    public FoodDictionary(Long id, String itemName, Double baseServingG,
+                          Double caloriesPerServing, Double proteinPerServing,
+                          Double carbsPerServing, Double fatPerServing) {
         this.id = id;
-        this.foodName = foodName;
-        this.calories = calories;
-        this.protein = protein;
-        this.carbs = carbs;
-        this.fat = fat;
-        this.servingSize = servingSize;
+        this.itemName = itemName;
+        this.baseServingG = baseServingG;
+        this.caloriesPerServing = caloriesPerServing;
+        this.proteinPerServing = proteinPerServing;
+        this.carbsPerServing = carbsPerServing;
+        this.fatPerServing = fatPerServing;
     }
 
     public Long getId() {
@@ -51,51 +51,51 @@ public class FoodDictionary {
         this.id = id;
     }
 
-    public String getFoodName() {
-        return foodName;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setFoodName(String foodName) {
-        this.foodName = foodName;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
-    public Double getCalories() {
-        return calories;
+    public Double getBaseServingG() {
+        return baseServingG;
     }
 
-    public void setCalories(Double calories) {
-        this.calories = calories;
+    public void setBaseServingG(Double baseServingG) {
+        this.baseServingG = baseServingG;
     }
 
-    public Double getProtein() {
-        return protein;
+    public Double getCaloriesPerServing() {
+        return caloriesPerServing;
     }
 
-    public void setProtein(Double protein) {
-        this.protein = protein;
+    public void setCaloriesPerServing(Double caloriesPerServing) {
+        this.caloriesPerServing = caloriesPerServing;
     }
 
-    public Double getCarbs() {
-        return carbs;
+    public Double getProteinPerServing() {
+        return proteinPerServing;
     }
 
-    public void setCarbs(Double carbs) {
-        this.carbs = carbs;
+    public void setProteinPerServing(Double proteinPerServing) {
+        this.proteinPerServing = proteinPerServing;
     }
 
-    public Double getFat() {
-        return fat;
+    public Double getCarbsPerServing() {
+        return carbsPerServing;
     }
 
-    public void setFat(Double fat) {
-        this.fat = fat;
+    public void setCarbsPerServing(Double carbsPerServing) {
+        this.carbsPerServing = carbsPerServing;
     }
 
-    public String getServingSize() {
-        return servingSize;
+    public Double getFatPerServing() {
+        return fatPerServing;
     }
 
-    public void setServingSize(String servingSize) {
-        this.servingSize = servingSize;
+    public void setFatPerServing(Double fatPerServing) {
+        this.fatPerServing = fatPerServing;
     }
 }
