@@ -1,6 +1,6 @@
 package com.example.demo.dto;
 
-public class SystemAccountDTO {
+public class SystemAccountDto {
 
     private Long id;
     private String email;
@@ -8,10 +8,10 @@ public class SystemAccountDTO {
     private String role;
     private String status;
 
-    public SystemAccountDTO() {
+    public SystemAccountDto() {
     }
 
-    public SystemAccountDTO(Long id, String email, String passwordHash, String role, String status) {
+    public SystemAccountDto(Long id, String email, String passwordHash, String role, String status) {
         this.id = id;
         this.email = email;
         this.passwordHash = passwordHash;
